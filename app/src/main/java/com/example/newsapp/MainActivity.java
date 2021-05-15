@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
     EditText etQuery;
     Button btnSearch,btnAboutUs;
     Dialog dialog;
+
     final String API_KEY = "9380bd491c3b4168a02ad7355105a3b6";
-    Adapter adapter;
+    Adapters adapter;
+
     List<Articles>  articles = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,12 +92,6 @@ public class MainActivity extends AppCompatActivity {
                 showDialog();
             }
         });
-
-
-
-
-
-
     }
 
     public void retrieveJson(String query ,String country, String apiKey){
@@ -116,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     swipeRefreshLayout.setRefreshing(false);
                     articles.clear();
                     articles = response.body().getArticles();
-                    adapter = new Adapter(MainActivity.this,articles);
+                    adapter = new Adapters(MainActivity.this, articles);
                     recyclerView.setAdapter(adapter);
                 }
             }

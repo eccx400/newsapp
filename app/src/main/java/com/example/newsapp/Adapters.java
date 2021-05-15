@@ -23,13 +23,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
 
     Context context;
     List<Articles> articles;
 
-
-    public Adapter(Context context, List<Articles> articles) {
+    public Adapters(Context context, List<Articles> articles) {
         this.context = context;
         this.articles = articles;
     }
@@ -94,7 +93,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
     }
 
-
     public String dateTime(String t){
         PrettyTime prettyTime = new PrettyTime(new Locale(getCountry()));
         String time = null;
@@ -106,7 +104,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             e.printStackTrace();
         }
         return time;
-
     }
 
     public String getCountry(){
