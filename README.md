@@ -9,3 +9,7 @@
 
 ## Screenshots
 
+- ![](./img/Main.PNG)
+- ![](./img/Story.PNG)
+- ![](./img/Search.PNG)
+
