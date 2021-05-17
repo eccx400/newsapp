@@ -1,6 +1,5 @@
 package com.example.newsapp;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSearch,btnAboutUs;
     Dialog dialog;
 
+    /** NewsAPI Key */
     final String API_KEY = "9380bd491c3b4168a02ad7355105a3b6";
     Adapters adapter;
 
